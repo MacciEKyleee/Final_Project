@@ -6,10 +6,15 @@ from datetime import datetime
 def main(number_of_days):
 
     key = "d7d33bcda62df8c3afe884bbb7c390a7"
-    gdansk = (54.372158, 18.638306)
+   # gdansk = (54.372158, 18.638306)
+    location = input('Podaj nazwę lokalizacji, dla której chcesz sprawdzić pogodę:')
+
+
+    #url = f'https://api.openweathermap.org/data/2.5/onecall?lat=' \
+    #      f'{gdansk[0]}&lon={gdansk[1]}&exclude=current,minutely,hourly,alerts&appid={key}&units=metric'
 
     url = f'https://api.openweathermap.org/data/2.5/onecall?lat=' \
-          f'{gdansk[0]}&lon={gdansk[1]}&exclude=current,minutely,hourly,alerts&appid={key}&units=metric'
+          f'{location[0]}&lon={location[1]}&exclude=current,minutely,hourly,alerts&appid={key}&units=metric'
 
     response = requests.get(url)
     data = json.loads(response.text)

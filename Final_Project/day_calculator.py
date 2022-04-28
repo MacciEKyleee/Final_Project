@@ -1,7 +1,7 @@
 from datetime import datetime
 
 def diff_dates():
-    choosen_date = input('Podaj wybraną przez siebie datę (max. 7 dni do przodu) w formacie DD-MM-YYYY.\n')
+    choosen_date = input('Please, enter the date of your choice (max. 7 days in advance) in the format: DD-MM-YYYY.\n')
     diff_dates = number_of_days(choosen_date)
     print(diff_dates)
     return diff_dates
